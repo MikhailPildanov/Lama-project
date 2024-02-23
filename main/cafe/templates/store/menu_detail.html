@@ -3,11 +3,11 @@
 {% block content %}
 
     <div class="row">
-        {% for menu in menus %}
-        <div class="col-lg-6">
-          <img class="thumbnail" src="">
+        {% for food in foods %}
+        <div class="col-lg-4">
+          <img class="thumbnail" src="{{food.imageURL}}">
           <div class="box-element product">
-              <h6><strong>{{menu.name}}</strong></h6>
+              <h6><strong>{{food.name}}</strong></h6>
               <hr>
               <a href="#" class="btn btn-warning">Перейти</a>
           </div>

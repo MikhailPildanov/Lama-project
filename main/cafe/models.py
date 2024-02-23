@@ -12,18 +12,41 @@ class Customer(models.Model):
 class Menu(models.Model):
     name = models.CharField(max_length=200, null=True)
     description = models.TextField(null=True)
-    #image = models.ImageField(null=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return str(self.id)
+        
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url
 
 class Food(models.Model):
     menu = models.ForeignKey(Menu, on_delete=models.SET_NULL, null=True, blank=True)
     name = models.CharField(max_length=200, null=True)
     price = models.FloatField()
     description = models.TextField(null=True)
-    #image = models.ImageField(null=True)
+    image = models.ImageField(null=True, blank=True)
     status = models.BooleanField(default=True)
 
-    def __str__(self):
-        return self.name
+    def __iter__(self):
+        return [self.menu,
+                self.name,
+                self.price,
+                self.description,
+                self.status]
+    
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url
 
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
