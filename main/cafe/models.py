@@ -1,14 +1,13 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser
+from django.contrib.auth.models import User
 
-class Customer(AbstractBaseUser):
-    name = models.CharField(max_length=200, null=True)
+
+class Customer(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone = models.CharField(max_length=12, null=True)
     
-    USERNAME_FIELD = 'name'
-    REQUIRED_FIELDS = ['phone']
     def __str__(self):
-        return self.name
+        return f'{self.user.username}\'s Profile'
 
 class Menu(models.Model):
     name = models.CharField(max_length=200, null=True)
