@@ -14,6 +14,7 @@ class Menu(models.Model):
     name = models.CharField(max_length=200, null=True)
     description = models.TextField(null=True)
     image = models.ImageField(null=True, blank=True)
+    # category
 
     def __str__(self):
         return str(self.id)
@@ -28,6 +29,7 @@ class Menu(models.Model):
 
 class Food(models.Model):
     menu = models.ForeignKey(Menu, on_delete=models.SET_NULL, null=True, blank=True)
+    # menu_name
     name = models.CharField(max_length=200, null=True)
     price = models.FloatField()
     description = models.TextField(null=True)

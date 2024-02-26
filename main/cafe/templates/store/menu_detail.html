@@ -2,18 +2,38 @@
 {% load static %}
 {% block content %}
 
-    <div class="row">
-        {% for food in foods %}
-        <div class="col-lg-4">
-          <img class="thumbnail" src="{{food.imageURL}}">
-          <div class="box-element product">
-              <h6><strong>{{food.name}}</strong></h6>
-              <hr>
-              <a href="#" class="btn btn-warning">Перейти</a>
-          </div>
+    <aside>
+        <h3>Навигация</h3>
+        <ul>
+            {% for food in foods %}
+                <a href="#"><li>{{food.name}}</li> </a>
+            {% endfor %}
+        </ul>
+    </aside>
+    <main>
+        <div class="row">
+            <div class="descript">
+                <img class="image-menu" src="{{menu.imageURL}}">
+                <h6>{{menu.description}}</h6>
+                <h6>Описание</h6>
+            </div>
+            {% for food in foods %}
+            <div class="col-lg-4">
+              <img class="thumbnail" src="{{food.imageURL}}">
+              <div class="box-element product">
+                  <h6><strong>{{food.name}}</strong></h6>
+                  <h6>{{food.description}}</h6>
+                  <h5>{{food.price}}</h5>
+                  <hr>
+                  <a href="#" class="btn btn-warning">"Заказать"</a>
+              </div>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
+    </main>
+
+
+
     
 {% endblock content %}
 
