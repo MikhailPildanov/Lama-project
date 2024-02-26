@@ -1,24 +1,20 @@
 {% extends "store/base.html" %}
-{% load crispy_forms_tags %}
+{% load bootstrap4 %}
 {% block content %}
-    <div class="content-section">
+
+    <div class="content-section" action="">
         <form method="POST">
             {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Log In</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Login</button>
-                <small class="text-muted ml-2">
-                    {% comment %} <a href="{% url 'password_reset' %}">Forgot Password?</a> {% endcomment %}
-                </small>
-            </div>
-        </form>
+            {% bootstrap_form_errors form %}
+            {% bootstrap_field form.username show_label=False placeholder="Имя"%}
+            {% bootstrap_field form.password show_label=False placeholder="Пароль"%}
+            <button class="btn btn-warning btn-block">Войти</button>
+          </form>
         <div class="border-top pt-3">
             <small class="text-muted">
-                Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
+                Еще не зарегистрированы? <a class="ml-2" href="{% url 'login' %}">Зарегистрироваться</a>
             </small>
         </div>
     </div>
+    
 {% endblock content %}

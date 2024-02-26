@@ -34,15 +34,19 @@ def register(request):
             phone = form.cleaned_data.get('phone')
             user = form.save(commit=False)
             user.username = username
-            user.phone = phone
+            Customer.objects.create(user=user, phone=phone) 
             user.save()
-
             login(request, user)
             return redirect('/')
 
     return render(request, 'user/register.html', {
         'form':form
     })
+
+@login_required
+def profile(request):
+    return render(request, 'user/profile.html')
+
 
 @login_required
 def profile_update(request):
