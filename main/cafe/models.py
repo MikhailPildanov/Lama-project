@@ -34,6 +34,7 @@ class Food(models.Model):
     description = models.TextField(null=True)
     image = models.ImageField(null=True, blank=True)
     status = models.BooleanField(default=True)
+    category = models.CharField(max_length=200, null=True)
 
     def __iter__(self):
         return [self.menu,
