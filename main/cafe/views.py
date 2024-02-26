@@ -13,7 +13,8 @@ def home(request):
 
 def menu_detail(request, id):
     foods = Food.objects.filter(menu=id)
-    context = {'foods':foods}
+    menu = Menu.objects.filter(id=id)
+    context = {'foods':foods, 'menu':menu}
     return render(request, 'store/menu_detail.html', context)
 
 def cart(request):
