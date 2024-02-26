@@ -1,21 +1,21 @@
 {% extends "store/base.html" %}
-{% load crispy_forms_tags %}
+{% load bootstrap4 %}
 {% block content %}
 
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Join Today</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Sign Up</button>
-            </div>
-        </form>
+            {% bootstrap_form_errors form %}
+            {% bootstrap_label "Phone" %}
+            {% bootstrap_field form.username show_label=False placeholder="Имя" %}
+            {% bootstrap_field form.phone show_label=False placeholder="+7 ____ _____"%}
+            {% bootstrap_field form.password1 show_label=False placeholder="Пароль"%}
+            {% bootstrap_field form.password2 show_label=False placeholder="Пароль заново"%}
+            <button class="btn btn-warning btn-block">Зарегистрироваться</button>
+          </form>
         <div class="border-top pt-3">
             <small class="text-muted">
-                Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+                Уже зарегистрированы? <a class="ml-2" href="{% url 'login' %}">Войти</a>
             </small>
         </div>
     </div>

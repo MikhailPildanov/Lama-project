@@ -3,6 +3,8 @@ from .models import *
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserUpdateForm
+from django.contrib.auth import login
+
 
 def home(request):
     menus = Menu.objects.all()
@@ -23,15 +25,28 @@ def checkout(request):
     return render(request, 'store/checkout.html', context)
 
 def register(request):
+    form = UserRegisterForm()
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
+
         if form.is_valid():
-            form.save()
-            messages.success(request, f'Your account has been created! You are now able to log in')
-            return redirect('login')
-    else:
-        form = UserRegisterForm()
-    return render(request, 'user/register.html', {'form': form})
+            username = form.cleaned_data.get('username')
+            phone = form.cleaned_data.get('phone')
+            user = form.save(commit=False)
+            user.username = username
+            Customer.objects.create(user=user, phone=phone) 
+            user.save()
+            login(request, user)
+            return redirect('/')
+
+    return render(request, 'user/register.html', {
+        'form':form
+    })
+
+@login_required
+def profile(request):
+    return render(request, 'user/profile.html')
+
 
 @login_required
 def profile_update(request):

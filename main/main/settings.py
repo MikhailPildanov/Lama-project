@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cafe.apps.CafeConfig',
-    'crispy_forms',
-    'crispy_bootstrap4',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +69,14 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.core.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.request",
+)
 
 WSGI_APPLICATION = 'main.wsgi.application'
 

@@ -26,8 +26,7 @@
     </div>
     <div class="navbar-nav">
       {% if user.is_authenticated %}
-        <a class="nav-item nav-link" href="{% url 'profile_update' %}">Профиль</a>
-        <a class="nav-item nav-link" href="{% url 'logout' %}">Выйти</a>
+        <a class="nav-item nav-link" href="{% url 'profile' %}">Профиль</a>
         <form method="post" action="{% url 'logout' %}">
           {% csrf_token %}
           <a class="nav-item nav-link"><button type="submit">Выйти</button></a>
@@ -37,7 +36,7 @@
          </a>
         
       {% else %}
-        <a class="nav-item nav-link" href="{% url 'login' %}">Войти</a>
+        <a class="nav-item nav-link" href="{% url 'login' %}?next={{request.path}}">Войти</a>
         <a class="nav-item nav-link" href="{% url 'register' %}">Зарегистрироваться</a>
         <a href="{% url 'cart' %}">
           <img  id="cart-icon" src="{% static 'images/cart.png' %}">
