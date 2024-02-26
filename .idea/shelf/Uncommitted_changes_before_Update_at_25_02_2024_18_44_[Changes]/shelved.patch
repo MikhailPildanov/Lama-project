@@ -1,0 +1,141 @@
+Index: main/cafe/templates/store/home.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends \"store/base.html\" %}\r\n{% load static %}\r\n{% block content %}\r\n\r\n    <div class=\"row\">\r\n        {% for menu in menus %}\r\n        <div class=\"col-lg-6\">\r\n          <img class=\"thumbnail\" src=\"{{menu.imageURL}}\">\r\n          <div class=\"box-element product\">\r\n              <h6><strong>{{menu.name}}</strong></h6>\r\n              <hr>\r\n              <a href=\"{% url 'menu_detail' menu.id %}\" class=\"btn btn-warning\">Перейти</a>\r\n          </div>\r\n        </div>\r\n        {% endfor %}\r\n    </div>\r\n    \r\n{% endblock content %}\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/cafe/templates/store/home.html b/main/cafe/templates/store/home.html
+--- a/main/cafe/templates/store/home.html	(revision a5d354610e3db88e938230e275db7a7ba226af0d)
++++ b/main/cafe/templates/store/home.html	(date 1708874773039)
+@@ -14,7 +14,7 @@
+         </div>
+         {% endfor %}
+     </div>
+-    
++    <mytag>Проверка</mytag>
+ {% endblock content %}
+ 
+ 
+Index: main/static/css/main.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>body{\r\n\tbackground-color: hsl(0, 0%, 98%);\r\n}\r\n\r\nh1,h2,h3,h4,h5,h6{\r\n\tcolor:hsl(0, 0%, 30%);\r\n}\r\n\r\n.box-element{\r\n\tbox-shadow:hsl(0, 0%, 80%) 0 0 16px;\r\n\tbackground-color: #fff;\r\n\tborder-radius: 4px;\r\n\tpadding: 10px;\r\n}\r\n\r\n.thumbnail{\r\n\twidth: 100%;\r\n\theight: 200px;\r\n\t-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);\r\n    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);\r\n    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);\r\n}\r\n\r\n.product{\r\n\tborder-radius: 0 0 4px 4px;\r\n}\r\n\r\n.bg-dark{\r\n\tbackground-color: #4f868c!important;\r\n}\r\n\r\n#cart-icon{\r\n\twidth:25px;\r\n\tdisplay: inline-block;\r\n\tmargin-left: 15px;\r\n}\r\n\r\n#cart-total{\r\n\tdisplay: block;\r\n\ttext-align: center;\r\n\tcolor:#fff;\r\n\tbackground-color: red;\r\n\twidth: 20px;\r\n\theight: 25px;\r\n\tborder-radius: 50%;\r\n\tfont-size: 14px;\r\n}\r\n\r\n.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{\r\n\tmargin-top: 10px;\r\n}\r\n\r\n.btn{\r\n\tborder-radius: 0;\r\n}\r\n\r\n.row-image{\r\n\twidth: 100px;\r\n}\r\n\r\n.form-field{\r\n\twidth:250px;\r\n\tdisplay: inline-block;\r\n\tpadding: 5px;\r\n}\r\n\r\n.cart-row{\r\n\tdisplay: flex;\r\n    align-items: flex-stretch;\r\n    padding-bottom: 10px;\r\n    margin-bottom: 10px;\r\n    border-bottom: 1px solid #ececec;\r\n\r\n}\r\n\r\n.quantity{\r\n\tdisplay: inline-block;\r\n\tfont-weight: 700;\r\n\tpadding-right:10px;\r\n\t\r\n\r\n}\r\n\r\n.chg-quantity{\r\n\twidth: 12px;\r\n\tcursor: pointer;\r\n\tdisplay: block;\r\n\tmargin-top: 5px;\r\n\ttransition:.1s;\r\n}\r\n\r\n.chg-quantity:hover{\r\n\topacity: .6;\r\n}\r\n\r\n\r\n.hidden{\r\n\tdisplay: none!important;\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/static/css/main.css b/main/static/css/main.css
+--- a/main/static/css/main.css	(revision a5d354610e3db88e938230e275db7a7ba226af0d)
++++ b/main/static/css/main.css	(date 1708874773047)
+@@ -6,6 +6,11 @@
+ 	color:hsl(0, 0%, 30%);
+ }
+ 
++mytag{
++	float: right;
++	color: #4f868c;
++}
++
+ .box-element{
+ 	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+ 	background-color: #fff;
+@@ -64,14 +69,14 @@
+ 	padding: 5px;
+ }
+ 
+-.cart-row{
+-	display: flex;
+-    align-items: flex-stretch;
+-    padding-bottom: 10px;
+-    margin-bottom: 10px;
+-    border-bottom: 1px solid #ececec;
++/*.cart-row{*/
++/*	display: flex;*/
++/*    align-items: flex-stretch;*/
++/*    padding-bottom: 10px;*/
++/*    margin-bottom: 10px;*/
++/*    border-bottom: 1px solid #ececec;*/
+ 
+-}
++/*}*/
+ 
+ .quantity{
+ 	display: inline-block;
+Index: main/cafe/models.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.db import models\r\nfrom django.contrib.auth.models import AbstractBaseUser\r\n\r\nclass Customer(AbstractBaseUser):\r\n    name = models.CharField(max_length=200, null=True)\r\n    phone = models.CharField(max_length=12, null=True)\r\n    \r\n    USERNAME_FIELD = 'name'\r\n    REQUIRED_FIELDS = ['phone']\r\n    def __str__(self):\r\n        return self.name\r\n\r\nclass Menu(models.Model):\r\n    name = models.CharField(max_length=200, null=True)\r\n    description = models.TextField(null=True)\r\n    image = models.ImageField(null=True, blank=True)\r\n\r\n    def __str__(self):\r\n        return str(self.id)\r\n        \r\n    @property\r\n    def imageURL(self):\r\n        try:\r\n            url = self.image.url\r\n        except:\r\n            url = ''\r\n        return url\r\n\r\nclass Food(models.Model):\r\n    menu = models.ForeignKey(Menu, on_delete=models.SET_NULL, null=True, blank=True)\r\n    name = models.CharField(max_length=200, null=True)\r\n    price = models.FloatField()\r\n    description = models.TextField(null=True)\r\n    image = models.ImageField(null=True, blank=True)\r\n    status = models.BooleanField(default=True)\r\n\r\n    def __iter__(self):\r\n        return [self.menu,\r\n                self.name,\r\n                self.price,\r\n                self.description,\r\n                self.status]\r\n    \r\n    @property\r\n    def imageURL(self):\r\n        try:\r\n            url = self.image.url\r\n        except:\r\n            url = ''\r\n        return url\r\n\r\nclass Order(models.Model):\r\n    customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)\r\n    order_time = models.DateTimeField(auto_now_add=True)\r\n    status = models.IntegerField(null=True)\r\n\r\n    def __str__(self):\r\n        return str(self.id)\r\n\r\nclass ShippingAddress(models.Model):\r\n    customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)\r\n    order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True, blank=True)\r\n    street = models.CharField(max_length=200, null=True)\r\n    house = models.CharField(max_length=200, null=True)\r\n    flat = models.CharField(max_length=200, null=True)\r\n    level = models.CharField(max_length=200, null=True)\r\n\r\n    def __str__(self):\r\n        return self.street\r\n\r\nclass OrderItem(models.Model):\r\n    food = models.ForeignKey(Food, on_delete=models.SET_NULL, blank=True, null=True)\r\n    order = models.ForeignKey(Order, on_delete=models.SET_NULL, blank=True, null=True)\r\n    quantity = models.IntegerField(default = 0, null=True, blank=True)\r\n    \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/cafe/models.py b/main/cafe/models.py
+--- a/main/cafe/models.py	(revision a5d354610e3db88e938230e275db7a7ba226af0d)
++++ b/main/cafe/models.py	(date 1708875370261)
+@@ -12,6 +12,7 @@
+ 
+ class Menu(models.Model):
+     name = models.CharField(max_length=200, null=True)
++    text = models.TextField(null=True)
+     description = models.TextField(null=True)
+     image = models.ImageField(null=True, blank=True)
+ 
+Index: main/cafe/migrations/0006_remove_food_category_menu_text.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/cafe/migrations/0006_remove_food_category_menu_text.py b/main/cafe/migrations/0006_remove_food_category_menu_text.py
+new file mode 100644
+--- /dev/null	(date 1708874773067)
++++ b/main/cafe/migrations/0006_remove_food_category_menu_text.py	(date 1708874773067)
+@@ -0,0 +1,22 @@
++# Generated by Django 4.2.10 on 2024-02-25 15:14
++
++from django.db import migrations, models
++
++
++class Migration(migrations.Migration):
++
++    dependencies = [
++        ('cafe', '0005_food_category'),
++    ]
++
++    operations = [
++        migrations.RemoveField(
++            model_name='food',
++            name='category',
++        ),
++        migrations.AddField(
++            model_name='menu',
++            name='text',
++            field=models.TextField(null=True),
++        ),
++    ]
+Index: main/cafe/migrations/0005_food_category.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/cafe/migrations/0005_food_category.py b/main/cafe/migrations/0005_food_category.py
+new file mode 100644
+--- /dev/null	(date 1708874773072)
++++ b/main/cafe/migrations/0005_food_category.py	(date 1708874773072)
+@@ -0,0 +1,18 @@
++# Generated by Django 4.2.10 on 2024-02-24 16:07
++
++from django.db import migrations, models
++
++
++class Migration(migrations.Migration):
++
++    dependencies = [
++        ('cafe', '0004_alter_food_image'),
++    ]
++
++    operations = [
++        migrations.AddField(
++            model_name='food',
++            name='category',
++            field=models.CharField(max_length=200, null=True),
++        ),
++    ]
