@@ -17,7 +17,17 @@ def menu_detail(request, id):
     return render(request, 'store/menu_detail.html', context)
 
 def cart(request):
-    context = {}
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, status=0)
+        items = order.orderitem_set.all()
+        cartItems = order.get_cart_items
+    else:
+        items = []
+        order = {'get_cart_total':0, 'get_cart_items':0}
+        cartItems = order['get_cart_items']
+
+    context = {'items':items, 'order':order, 'cartItems':cartItems}
     return render(request, 'store/cart.html', context)
 
 def checkout(request):
@@ -34,8 +44,8 @@ def register(request):
             phone = form.cleaned_data.get('phone')
             user = form.save(commit=False)
             user.username = username
-            Customer.objects.create(user=user, phone=phone) 
             user.save()
+            Customer.objects.create(user=user, phone=phone) 
             login(request, user)
             return redirect('/')
 
