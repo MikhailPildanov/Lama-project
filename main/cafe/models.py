@@ -7,7 +7,7 @@ class Customer(models.Model):
     phone = models.CharField(max_length=12, null=True)
     
     def __str__(self):
-        return f'{self.user.username}\'s Profile'
+        return self.user.username
 
 class Menu(models.Model):
     name = models.CharField(max_length=200, null=True)
