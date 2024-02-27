@@ -23,6 +23,7 @@ h1,h2,h3,h4,h5,h6{
 
 .product{
 	border-radius: 0 0 4px 4px;
+	width: 400px;
 }
 
 .bg-dark{
@@ -49,17 +50,18 @@ h1,h2,h3,h4,h5,h6{
 .col-lg-4, .col-lg-8, .col-lg-12{
 	margin: 10px;
 	width: 250px;
-	height: 300px;
+	height: 400px;
 }
 
 .col-lg-6{
 	margin: 10px;
 	width: 350px;
 	height: 290px;
-	margin-block: 20px;
+
 }
 
 .col-lg-7{
+
 	margin: 10px;
 	width: 350px;
 }
@@ -131,5 +133,13 @@ ul{
 	height: 180px;
 	width: 300px;
 	float: left;
+	border-style: solid;
+	border-color: hsl(0, 0%, 30%);
+	border-width: 2px;
+}
+
+.descript{
 	margin-block: 30px;
+	display: inline-block;
+	height: 200px;
 }

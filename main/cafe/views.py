@@ -14,7 +14,8 @@ def home(request):
 def menu_detail(request, id):
     foods = Food.objects.filter(menu=id)
     menu = Menu.objects.get(id=id)
-    context = {'foods':foods, 'menu':menu}
+    categories = set(food.category for food in foods)
+    context = {'foods':foods, 'menu':menu, 'categories':categories}
     return render(request, 'store/menu_detail.html', context)
 
 def cart(request):

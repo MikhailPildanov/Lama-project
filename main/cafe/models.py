@@ -28,7 +28,6 @@ class Menu(models.Model):
 
 class Food(models.Model):
     menu = models.ForeignKey(Menu, on_delete=models.SET_NULL, null=True, blank=True)
-    # menu_name
     name = models.CharField(max_length=200, null=True)
     price = models.FloatField()
     description = models.TextField(null=True)
