@@ -57,7 +57,12 @@ def register(request):
 
 @login_required
 def profile(request):
-    return render(request, 'user/profile.html')
+    user = request.user
+    customer = None
+    if Customer.objects.filter(user=user):
+        customer = user.customer
+    context = {'user':user, 'customer':customer}
+    return render(request, 'user/profile.html', context)
 
 
 @login_required
