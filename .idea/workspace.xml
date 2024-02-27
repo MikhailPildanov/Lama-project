@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c6da298-3780-48df-9490-ff79062c0987" name="Changes" comment="отсортирует позиции в меню">
+    <list default="true" id="9c6da298-3780-48df-9490-ff79062c0987" name="Changes" comment="Новые позиции в меню 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/cafe/templates/store/menu_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/cafe/templates/store/menu_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709020563996</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Новые позиции в меню 2">
+      <option name="closed" value="true" />
+      <created>1709021786517</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709021786517</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +190,7 @@
     <MESSAGE value="добавит бд&#10;и описание" />
     <MESSAGE value="добавит позиции в БД" />
     <MESSAGE value="отсортирует позиции в меню" />
-    <option name="LAST_COMMIT_MESSAGE" value="отсортирует позиции в меню" />
+    <MESSAGE value="Новые позиции в меню 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Новые позиции в меню 2" />
   </component>
 </project>
