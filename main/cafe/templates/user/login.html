@@ -1,19 +1,28 @@
 {% extends "store/base.html" %}
 {% load bootstrap4 %}
 {% block content %}
-
-    <div class="content-section" action="">
-        <form method="POST">
-            {% csrf_token %}
-            {% bootstrap_form_errors form %}
-            {% bootstrap_field form.username show_label=False placeholder="Имя"%}
-            {% bootstrap_field form.password show_label=False placeholder="Пароль"%}
-            <button class="btn btn-warning btn-block">Войти</button>
-          </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Еще не зарегистрированы? <a class="ml-2" href="{% url 'login' %}">Зарегистрироваться</a>
-            </small>
+    <div class="container-fluid nt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="content-section" action="">
+                            <form method="POST">
+                                {% csrf_token %}
+                                {% bootstrap_form_errors form %}
+                                {% bootstrap_field form.username show_label=False placeholder="Имя"%}
+                                {% bootstrap_field form.password show_label=False placeholder="Пароль"%}
+                                <button class="btn btn-warning btn-block text-center">Войти</button>
+                            </form>
+                            {% comment %} <div class="border-top pt-3">
+                                <small class="text-muted">
+                                    Еще не зарегистрированы? <a class="ml-2" href="{% url 'login' %}">Зарегистрироваться</a>
+                                </small>
+                            </div> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
