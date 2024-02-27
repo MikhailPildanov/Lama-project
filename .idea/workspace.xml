@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c6da298-3780-48df-9490-ff79062c0987" name="Changes" comment="добавит бд&#10;и описание">
+    <list default="true" id="9c6da298-3780-48df-9490-ff79062c0987" name="Changes" comment="добавит позиции в БД">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/cafe/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/cafe/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/cafe/templates/store/menu_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/cafe/templates/store/menu_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/cafe/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/cafe/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/images/pepperoni.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +74,7 @@
       <workItem from="1708941370141" duration="6334000" />
       <workItem from="1708947833386" duration="7517000" />
       <workItem from="1708955399395" duration="10445000" />
-      <workItem from="1709017335722" duration="1278000" />
+      <workItem from="1709017335722" duration="2752000" />
     </task>
     <task id="LOCAL-00001" summary="Навигация">
       <option name="closed" value="true" />
@@ -120,7 +116,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708960523060</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="добавит позиции в БД">
+      <option name="closed" value="true" />
+      <created>1709018781233</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709018781233</updated>
+    </task>
+    <task id="LOCAL-00007" summary="добавит позиции в БД">
+      <option name="closed" value="true" />
+      <created>1709018846420</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709018846420</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +157,7 @@
     <MESSAGE value="Проба" />
     <MESSAGE value="База данных 2" />
     <MESSAGE value="добавит бд&#10;и описание" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавит бд&#10;и описание" />
+    <MESSAGE value="добавит позиции в БД" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавит позиции в БД" />
   </component>
 </project>

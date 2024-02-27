@@ -19,21 +19,22 @@
                 <h6>Описание</h6>
             </div>
         {% for category in categories %}
-            <h1>{{category}}</h1>
-        {% endfor %}
-
+            <h1>{{category}}</h1 >
             {% for food in foods %}
-            <div class="col-lg-4">
-              <img class="thumbnail" src="{{food.imageURL}}">
-              <div class="box-element product">
-                  <h6><strong>{{food.name}}</strong></h6>
-                  <h6>{{food.description}}</h6>
-                  <h5>{{food.price}}</h5>
-                  <hr>
-                  <a href="#" class="btn btn-warning">"Заказать"</a>
-              </div>
-            </div>
+                {% if food.category == category %}
+                    <div class="col-lg-4">
+                        <img class="thumbnail" src="{{food.imageURL}}">
+                        <div class="box-element product">
+                            <h6><strong>{{food.name}}</strong></h6>
+                            <h6>{{food.description}}</h6>
+                            <h5>{{food.price}}</h5>
+                            <hr>
+                            <a href="#" class="btn btn-warning">"Заказать"</a>
+                        </div>
+                    </div>
+                {% endif %}
             {% endfor %}
+        {% endfor %}
         </div>
     </main>
 
