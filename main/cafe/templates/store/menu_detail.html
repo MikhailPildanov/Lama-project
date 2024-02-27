@@ -2,6 +2,40 @@
 {% load static %}
 {% block content %}
 
+    <aside>
+        <h3>Навигация</h3>
+        <ul>
+            {% for category in categories %}
+                <a href="#{{category}}"><li>{{category}}</li> </a>
+            {% endfor %}
+        </ul>
+    </aside>
+    <main>
+
+        <div class="row">
+            <div class="descript">
+                <img class="image-menu" src="{{menu.imageURL}}">
+                <h1>{{menu.name}}</h1>
+                <h6>{{menu.description}}</h6>
+            </div>
+        {% for category in categories %}
+            <div id="{{category}}">
+                <h2>{{category}}</h2 >
+            </div>
+            {% for food in foods %}
+                {% if food.category == category %}
+                    <div class="col-lg-4">
+                        <img class="thumbnail" src="{{food.imageURL}}">
+                        <div class="box-element product">
+                            <h6><strong>{{food.name}}</strong></h6>
+                            <h6>{{food.description}}</h6>
+                            <h5>{{food.price}}</h5>
+                            <hr>
+                            <a href="#" class="btn btn-warning">"Заказать"</a>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
     <div class="row">
         {% for food in foods %}
         <div class="col-lg-4">
@@ -13,7 +47,11 @@
           </div>
         </div>
         {% endfor %}
-    </div>
+        </div>
+    </main>
+
+
+
     
 {% endblock content %}
 

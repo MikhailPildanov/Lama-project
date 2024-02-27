@@ -1,0 +1,93 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9c6da298-3780-48df-9490-ff79062c0987\" name=\"Changes\" comment=\"добавит позиции в БД\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/main/cafe/templates/store/menu_detail.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/main/cafe/templates/store/menu_detail.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/main/static/css/main.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/main/static/css/main.css\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PREVIOUS_COMMIT_AUTHORS\">\r\n      <list>\r\n        <option value=\"Diana &lt;rinteusy.gmail.com&gt;\" />\r\n        <option value=\"Diana{RinTeusy.gmail.com}\" />\r\n        <option value=\"Diana\" />\r\n      </list>\r\n    </option>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2coiWXSbIcyiLUzmKRWEGpKkagT\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;fronttt&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9c6da298-3780-48df-9490-ff79062c0987\" name=\"Changes\" comment=\"\" />\r\n      <created>1708784364048</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1708784364048</updated>\r\n      <workItem from=\"1708784365142\" duration=\"1537000\" />\r\n      <workItem from=\"1708789146219\" duration=\"2250000\" />\r\n      <workItem from=\"1708864562359\" duration=\"4294000\" />\r\n      <workItem from=\"1708869969319\" duration=\"4277000\" />\r\n      <workItem from=\"1708874280211\" duration=\"2636000\" />\r\n      <workItem from=\"1708941370141\" duration=\"6334000\" />\r\n      <workItem from=\"1708947833386\" duration=\"7517000\" />\r\n      <workItem from=\"1708955399395\" duration=\"10445000\" />\r\n      <workItem from=\"1709017335722\" duration=\"2752000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Навигация\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1708957737971</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1708957737971</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"База данных\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1708958568098</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1708958568098</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Проба\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1708959140412</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1708959140412</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"База данных 2\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1708960449667</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1708960449667</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"добавит бд&#10;и описание\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1708960523060</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1708960523060</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"добавит позиции в БД\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1709018781233</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1709018781233</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"добавит позиции в БД\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1709018846420</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1709018846420</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"delete venv folder\" />\r\n    <MESSAGE value=\"ляляля\" />\r\n    <MESSAGE value=\"Навигация\" />\r\n    <MESSAGE value=\"База данных\" />\r\n    <MESSAGE value=\"Проба\" />\r\n    <MESSAGE value=\"База данных 2\" />\r\n    <MESSAGE value=\"добавит бд&#10;и описание\" />\r\n    <MESSAGE value=\"добавит позиции в БД\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"добавит позиции в БД\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1ec54748180e0c1d643029d05f6a399a684aee68)
++++ b/.idea/workspace.xml	(date 1709020625627)
+@@ -4,11 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="9c6da298-3780-48df-9490-ff79062c0987" name="Changes" comment="добавит позиции в БД">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/main/cafe/templates/store/menu_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/cafe/templates/store/menu_detail.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/main/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/css/main.css" afterDir="false" />
+-    </list>
++    <list default="true" id="9c6da298-3780-48df-9490-ff79062c0987" name="Changes" comment="отсортирует позиции в меню" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -24,7 +20,7 @@
+     </option>
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="main" />
++        <entry key="$PROJECT_DIR$" value="fronttt" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -37,20 +33,20 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;fronttt&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "main",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+@@ -132,7 +128,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1709018846420</updated>
+     </task>
+-    <option name="localTasksCounter" value="8" />
++    <task id="LOCAL-00008" summary="отсортирует позиции в меню">
++      <option name="closed" value="true" />
++      <created>1709020563996</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1709020563996</updated>
++    </task>
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -158,6 +162,7 @@
+     <MESSAGE value="База данных 2" />
+     <MESSAGE value="добавит бд&#10;и описание" />
+     <MESSAGE value="добавит позиции в БД" />
+-    <option name="LAST_COMMIT_MESSAGE" value="добавит позиции в БД" />
++    <MESSAGE value="отсортирует позиции в меню" />
++    <option name="LAST_COMMIT_MESSAGE" value="отсортирует позиции в меню" />
+   </component>
+ </project>
+\ No newline at end of file

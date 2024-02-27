@@ -15,6 +15,9 @@ def home(request):
 
 def menu_detail(request, id):
     foods = Food.objects.filter(menu=id)
+    menu = Menu.objects.get(id=id)
+    categories = set(food.category for food in foods)
+    context = {'foods':foods, 'menu':menu, 'categories':categories}
     if request.user.is_authenticated:
         customer = request.user.customer
         order, created = Order.objects.get_or_create(customer=customer, status=0)
@@ -132,7 +135,12 @@ def register(request):
 
 @login_required
 def profile(request):
-    return render(request, 'user/profile.html')
+    user = request.user
+    customer = None
+    if Customer.objects.filter(user=user):
+        customer = user.customer
+    context = {'user':user, 'customer':customer}
+    return render(request, 'user/profile.html', context)
 
 
 @login_required

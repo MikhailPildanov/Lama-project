@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9c6da298-3780-48df-9490-ff79062c0987" name="Changes" comment="Вернет БД">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/cafe/templates/store/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/cafe/templates/store/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/cafe/templates/store/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/cafe/templates/store/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Diana &lt;rinteusy.gmail.com&gt;" />
+        <option value="Diana{RinTeusy.gmail.com}" />
+        <option value="Diana" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;RinTeusy&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e3cbbb0c-c971-4fd8-995f-6aaa2e9247f5" />
+        <option name="url" value="https://github.com/MikhailPildanov/Lama-project.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2coiWXSbIcyiLUzmKRWEGpKkagT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9c6da298-3780-48df-9490-ff79062c0987" name="Changes" comment="" />
+      <created>1708784364048</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708784364048</updated>
+      <workItem from="1708784365142" duration="1537000" />
+      <workItem from="1708789146219" duration="2250000" />
+      <workItem from="1708864562359" duration="4294000" />
+      <workItem from="1708869969319" duration="4277000" />
+      <workItem from="1708874280211" duration="2636000" />
+      <workItem from="1708941370141" duration="6334000" />
+      <workItem from="1708947833386" duration="7517000" />
+      <workItem from="1708955399395" duration="10445000" />
+      <workItem from="1709017335722" duration="2752000" />
+    </task>
+    <task id="LOCAL-00001" summary="Навигация">
+      <option name="closed" value="true" />
+      <created>1708957737971</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708957737971</updated>
+    </task>
+    <task id="LOCAL-00002" summary="База данных">
+      <option name="closed" value="true" />
+      <created>1708958568098</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708958568098</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Проба">
+      <option name="closed" value="true" />
+      <created>1708959140412</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708959140412</updated>
+    </task>
+    <task id="LOCAL-00004" summary="База данных 2">
+      <option name="closed" value="true" />
+      <created>1708960449667</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708960449667</updated>
+    </task>
+    <task id="LOCAL-00005" summary="добавит бд&#10;и описание">
+      <option name="closed" value="true" />
+      <created>1708960523060</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708960523060</updated>
+    </task>
+    <task id="LOCAL-00006" summary="добавит позиции в БД">
+      <option name="closed" value="true" />
+      <created>1709018781233</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709018781233</updated>
+    </task>
+    <task id="LOCAL-00007" summary="добавит позиции в БД">
+      <option name="closed" value="true" />
+      <created>1709018846420</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709018846420</updated>
+    </task>
+    <task id="LOCAL-00008" summary="отсортирует позиции в меню">
+      <option name="closed" value="true" />
+      <created>1709020563996</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709020563996</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Новые позиции в меню 2">
+      <option name="closed" value="true" />
+      <created>1709021786517</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709021786517</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Вернет БД">
+      <option name="closed" value="true" />
+      <created>1709031020964</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709031020964</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Вернет БД">
+      <option name="closed" value="true" />
+      <created>1709031093579</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709031093579</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="delete venv folder" />
+    <MESSAGE value="ляляля" />
+    <MESSAGE value="Навигация" />
+    <MESSAGE value="База данных" />
+    <MESSAGE value="Проба" />
+    <MESSAGE value="База данных 2" />
+    <MESSAGE value="добавит бд&#10;и описание" />
+    <MESSAGE value="добавит позиции в БД" />
+    <MESSAGE value="отсортирует позиции в меню" />
+    <MESSAGE value="Новые позиции в меню 2" />
+    <MESSAGE value="Вернет БД" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вернет БД" />
+  </component>
+</project>
