@@ -1,13 +1,20 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import datetime
 
 
 class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone = models.CharField(max_length=12, null=True)
-    
+    biological_sex = models.BooleanField(null=True, blank=True)
+    date_of_birth = models.DateField(null=True)
+    activity_level = models.IntegerField(null=True, default=1)
+
     def __str__(self):
         return self.user.username
+    
+    def age(self):
+        return datetime.now().year() - self.date_of_birth.to_python().year()
 
 class Menu(models.Model):
     name = models.CharField(max_length=200, null=True)
@@ -34,13 +41,27 @@ class Food(models.Model):
     image = models.ImageField(null=True, blank=True)
     status = models.BooleanField(default=True)
     category = models.CharField(max_length=200, null=True)
+    weight_in_grams = models.IntegerField(null=True, default=1)
 
     def __iter__(self):
         return [self.menu,
                 self.name,
                 self.price,
                 self.description,
-                self.status]
+                self.status,]
+
+class FoodEnergy(models.Model):
+    food = models.ForeignKey(Food, on_delete=models.SET_NULL, null=True, blank=True)
+    cal_per_100g = models.IntegerField(null=True, default=1)
+    prot_per_100g = models.IntegerField(null=True, default=1)
+    fat_per_100g = models.IntegerField(null=True, default=1)
+    carbs_per_100g = models.IntegerField(null=True, default=1)
+
+    def get_total(self):
+        return
+    
+
+
     
     @property
     def imageURL(self):
