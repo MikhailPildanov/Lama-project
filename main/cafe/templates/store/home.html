@@ -5,12 +5,12 @@
         <div class="row">
             {% for menu in menus %}
             <div class="col-lg-4">
-            <img class="thumbnail" src="{{menu.imageURL}}">
-            <div class="box-element product">
-                <h6><strong>{{menu.name}}</strong></h6>
-                <hr>
-                <a href="{% url 'menu_detail' menu.id %}" class="btn btn-warning">Перейти</a>
-            </div>
+                <a href="{% url 'menu_detail' menu.id %}"><img class="thumbnail" src="{{menu.imageURL}}"></a>
+                <div class="box-element product">
+                    <h6><strong>{{menu.name}}</strong></h6>
+                    <hr>
+                    <a href="{% url 'menu_detail' menu.id %}" class="btn btn-warning">Перейти</a>
+                </div>
             </div>
             {% endfor %}
         </div>

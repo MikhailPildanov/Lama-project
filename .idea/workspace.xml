@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c6da298-3780-48df-9490-ff79062c0987" name="Changes" comment="Новые позиции в меню 2">
+    <list default="true" id="9c6da298-3780-48df-9490-ff79062c0987" name="Changes" comment="Вернет БД">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/cafe/templates/store/menu_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/cafe/templates/store/menu_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/cafe/templates/store/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/cafe/templates/store/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/cafe/templates/store/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/cafe/templates/store/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/main/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +30,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "RinTeusy"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;RinTeusy&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -56,7 +56,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "fronttt",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -163,7 +163,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709021786517</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Вернет БД">
+      <option name="closed" value="true" />
+      <created>1709031020964</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709031020964</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Вернет БД">
+      <option name="closed" value="true" />
+      <created>1709031093579</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709031093579</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +207,7 @@
     <MESSAGE value="добавит позиции в БД" />
     <MESSAGE value="отсортирует позиции в меню" />
     <MESSAGE value="Новые позиции в меню 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Новые позиции в меню 2" />
+    <MESSAGE value="Вернет БД" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вернет БД" />
   </component>
 </project>
