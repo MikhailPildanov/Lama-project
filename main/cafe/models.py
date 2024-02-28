@@ -13,8 +13,14 @@ class Customer(models.Model):
     def __str__(self):
         return self.user.username
     
+    @property
     def age(self):
         return datetime.now().year() - self.date_of_birth.to_python().year()
+    
+    @property
+    def calories_norm(self):
+        return 2500
+
 
 class Menu(models.Model):
     name = models.CharField(max_length=200, null=True)
@@ -33,6 +39,13 @@ class Menu(models.Model):
             url = ''
         return url
 
+class FoodEnergy(models.Model):
+    cal_per_100g = models.IntegerField(null=True, default=1)
+    prot_per_100g = models.IntegerField(null=True, default=1)
+    fat_per_100g = models.IntegerField(null=True, default=1)
+    carbs_per_100g = models.IntegerField(null=True, default=1)
+
+
 class Food(models.Model):
     menu = models.ForeignKey(Menu, on_delete=models.SET_NULL, null=True, blank=True)
     name = models.CharField(max_length=200, null=True)
@@ -42,7 +55,14 @@ class Food(models.Model):
     status = models.BooleanField(default=True)
     category = models.CharField(max_length=200, null=True)
     weight_in_grams = models.IntegerField(null=True, default=1)
+    energy = models.OneToOneField(FoodEnergy, on_delete=models.SET_NULL, null=True, blank=True)
 
+    def __iter__(self):
+        return [self.menu,
+                self.name,
+                self.price,
+                self.description,
+                self.status,]
     def __str__(self):
         return self.name
     
@@ -53,6 +73,8 @@ class Food(models.Model):
         except:
             url = ''
         return url
+
+
 
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
