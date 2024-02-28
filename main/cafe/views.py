@@ -49,12 +49,16 @@ def cart(request):
         order, created = Order.objects.get_or_create(customer=customer, status=0)
         items = order.orderitem_set.all()
         cartItems = order.get_cart_items
+        total_cals = order.get_cart_cals
+        cals_norm = customer.calories_norm
     else:
         items = []
-        order = {'get_cart_total':0, 'get_cart_items':0}
+        order = {'get_cart_total':0, 'get_cart_items':0, 'get_cart_cals':0}
         cartItems = order['get_cart_items']
+        total_cals = order['get_cart_cals']
+        cals_norm = 'NaN'
 
-    context = {'items':items, 'order':order, 'cartItems':cartItems}
+    context = {'items':items, 'order':order, 'cartItems':cartItems, 'total_cals':total_cals, 'cals_norm':cals_norm}
     return render(request, 'store/cart.html', context)
 
 def updateItem(request):

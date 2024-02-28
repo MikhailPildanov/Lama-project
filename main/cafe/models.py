@@ -96,6 +96,11 @@ class Order(models.Model):
         orderitems = self.orderitem_set.all()
         total = sum([item.quantity for item in orderitems])
         return total
+    @property
+    def get_cart_cals(self):
+        orderitems = self.orderitem_set.all()
+        total = sum([item.food.energy.cal_per_100g * item.food.weight_in_grams // 100 for item in orderitems])
+        return total
 
 class ShippingAddress(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)

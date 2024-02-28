@@ -14,6 +14,7 @@
                         <tr>
                             <th><h5>Количество: <strong>{{order.get_cart_items}}</strong></h5></th>
                             <th><h5>Сумма: <strong>{{order.get_cart_total|floatformat:2}} руб</strong></h5></th>
+                            <th><h5>Каллории/Норма: <strong>{{order.get_cart_cals}} ккал/<p>{{cals_norm}} ккал</strong></h5></th>
                             <th>
                                 <a style="float:right; margin:5px" class="btn 
                                 btn-success" href="{% url 'checkout' %}">Оформить заказ
