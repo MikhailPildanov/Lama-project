@@ -5,7 +5,7 @@
     <aside>
         <h3>Навигация</h3>
         <ul>
-            {% for category in categories %}
+            {% for category, foods_with_energy in foods_with_energy_by_category.items %}
                 <a href="#{{category}}"><li>{{category}}</li> </a>
             {% endfor %}
         </ul>
