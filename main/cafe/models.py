@@ -43,25 +43,8 @@ class Food(models.Model):
     category = models.CharField(max_length=200, null=True)
     weight_in_grams = models.IntegerField(null=True, default=1)
 
-    def __iter__(self):
-        return [self.menu,
-                self.name,
-                self.price,
-                self.description,
-                self.status,]
-
-class FoodEnergy(models.Model):
-    food = models.ForeignKey(Food, on_delete=models.SET_NULL, null=True, blank=True)
-    cal_per_100g = models.IntegerField(null=True, default=1)
-    prot_per_100g = models.IntegerField(null=True, default=1)
-    fat_per_100g = models.IntegerField(null=True, default=1)
-    carbs_per_100g = models.IntegerField(null=True, default=1)
-
-    def get_total(self):
-        return
-    
-
-
+    def __str__(self):
+        return self.name
     
     @property
     def imageURL(self):
@@ -75,6 +58,7 @@ class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
     order_time = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(null=True)
+    transaction_id = models.CharField(max_length=200, null=True)
 
     def __str__(self):
         return str(self.id)
