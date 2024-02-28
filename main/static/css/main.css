@@ -47,23 +47,8 @@ h1,h2,h3,h4,h5,h6{
 	font-size: 14px;
 }
 
-.col-lg-4, .col-lg-8, .col-lg-12{
-	margin: 10px;
-	width: 250px;
-	height: 400px;
-}
-
-.col-lg-6{
-	margin: 10px;
-	width: 350px;
-	height: 290px;
-
-}
-
-.col-lg-7{
-
-	margin: 10px;
-	width: 350px;
+.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{
+	margin-top: 10px;
 }
 
 .btn{

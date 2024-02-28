@@ -17,7 +17,18 @@ def menu_detail(request, id):
     foods = Food.objects.filter(menu=id)
     menu = Menu.objects.get(id=id)
     categories = set(food.category for food in foods)
-    context = {'foods':foods, 'menu':menu, 'categories':categories}
+    foods_with_energy_by_category = {}
+    for category in categories:
+        foods_by_catergory = Food.objects.filter(menu=id, category=category)
+        energies = []
+        for food in foods_by_catergory:
+            energy_dict = {}
+            if food.energy:
+                energy_dict['ккал'] = food.weight_in_grams * food.energy.cal_per_100g // 100
+                energy_dict['б/ж/у'] = str(food.weight_in_grams * food.energy.prot_per_100g // 100)+ '/' + str(food.weight_in_grams * food.energy.fat_per_100g // 100) + '/' + str(food.weight_in_grams * food.energy.carbs_per_100g // 100)
+            energies.append(energy_dict)
+        foods_with_energy_by_category[category] = zip(foods_by_catergory, energies)
+            
     if request.user.is_authenticated:
         customer = request.user.customer
         order, created = Order.objects.get_or_create(customer=customer, status=0)
@@ -28,8 +39,8 @@ def menu_detail(request, id):
         items = []
         order = {'get_cart_total':0, 'get_cart_items':0, 'shipping':False}
         cartItems = order['get_cart_items']
-
-    context = {'foods':foods, 'cartItems':cartItems}
+    
+    context = {'foods_with_energy_by_category':foods_with_energy_by_category, 'cartItems':cartItems, 'menu':menu}
     return render(request, 'store/menu_detail.html', context)
 
 def cart(request):
@@ -136,10 +147,16 @@ def register(request):
 @login_required
 def profile(request):
     user = request.user
-    customer = None
+    customer, age = None, None
     if Customer.objects.filter(user=user):
         customer = user.customer
-    context = {'user':user, 'customer':customer}
+        age = customer.age
+        sex = 'Женщина'
+        if customer.biological_sex is True:
+            sex = 'Мужчина'
+
+    
+    context = {'user':user, 'customer':customer, 'age':age, 'sex':sex}
     return render(request, 'user/profile.html', context)
 
 

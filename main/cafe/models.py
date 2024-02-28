@@ -15,7 +15,7 @@ class Customer(models.Model):
     
     @property
     def age(self):
-        return datetime.now().year() - self.date_of_birth.to_python().year()
+        return datetime.now().year - self.date_of_birth.year
     
     @property
     def calories_norm(self):

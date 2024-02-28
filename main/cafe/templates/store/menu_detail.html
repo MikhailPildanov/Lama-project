@@ -18,11 +18,11 @@
                 <h1>{{menu.name}}</h1>
                 <h6>{{menu.description}}</h6>
             </div>
-        {% for category in categories %}
+        {% for category, foods_with_energy in foods_with_energy_by_category.items %}
             <div id="{{category}}">
                 <h2>{{category}}</h2 >
             </div>
-            {% for food in foods %}
+            {% for food, energy in foods_with_energy %}
                 {% if food.category == category %}
                     <div class="col-lg-4">
                         <img class="thumbnail" src="{{food.imageURL}}">
@@ -30,15 +30,17 @@
                             <h6><strong>{{food.name}}</strong></h6>
                             <h6>{{food.description}}</h6>
                             <h5>{{food.price}}</h5>
-                            <h5>{{food.energy.cal_per_100g}}</h5>
-                            <h5>{{food.energy.prot_per_100g}}</h5>
+                            {% for key, value in energy.items %}
+                                <h6>{{key}}: {{value}}</h6>
+                            {% endfor %}
                             <hr>
-                            <a href="#" class="btn btn-warning">"Заказать"</a>
+                            <button data-product="{{food.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">В корзину</button>
                         </div>
                     </div>
                 {% endif %}
             {% endfor %}
-    <div class="row">
+        {% endfor %}
+    {% comment %} <div class="row">
         {% for food in foods %}
         <div class="col-lg-4">
           <img class="thumbnail" src="{{food.imageURL}}">
@@ -49,7 +51,7 @@
           </div>
         </div>
         {% endfor %}
-        </div>
+        </div> {% endcomment %}
     </main>
 
 
