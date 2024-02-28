@@ -16,7 +16,7 @@ def home(request):
 def menu_detail(request, id):
     foods = Food.objects.filter(menu=id)
     menu = Menu.objects.get(id=id)
-    categories = set(food.category for food in foods)
+    categories = sorted(list(set(food.category for food in foods)))
     foods_with_energy_by_category = {}
     for category in categories:
         foods_by_catergory = Food.objects.filter(menu=id, category=category)
