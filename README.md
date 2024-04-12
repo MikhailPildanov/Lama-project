@@ -41,11 +41,11 @@ Project was ended with creating an MVP app and successful presentation at the en
    python3 main/manage.py runserver 8000
    ```
    
-##Usage
+## Usage
 
 The app was not intended to be used in production, only for training purposes.
 
-##Contributing
+## Contributing
 
 Any contributions to this project is greatly appreciated. BUT, as it stated earlier, the project is ended, so your contributions might be ignored.
 
@@ -56,11 +56,11 @@ If your still want to contribute:
 4.Push to the Branch (git push origin feature/AmazingFeature)
 5.Open a Pull Request
 
-##License
+## License
 
 WTFPL (Do What The Fuck You Want Public License). Just use it.
 
-##Constacts
+## Constacts
 
 Original creators:
 @MakaMonstir
