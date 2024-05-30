@@ -1,6 +1,7 @@
+from django.forms import model_to_dict
 from django.shortcuts import render, redirect
 
-from main.cafe.serializers import MenuSerializer
+from .serializers import MenuSerializer
 from .models import *
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -8,6 +9,8 @@ from .forms import UserRegisterForm, UserUpdateForm
 from django.contrib.auth import login
 from django.http import JsonResponse
 from rest_framework import generics
+from rest_framework.views import APIView
+from rest_framework.response import Response
 import json, datetime
 
 
@@ -163,9 +166,47 @@ def profile_update(request):
     return render(request, 'user/profile_update.html', context)
 
 
-class menuAPIView(generics.ListAPIView):
+class MenuAPIView(generics.ListAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
+
+
+class MenuAPIView(APIView):
+    def get(self, request):
+        menu_list = Menu.objects.all()
+        return Response({'menues': MenuSerializer(menu_list, many=True).data})
     
+    def post(self, request):
+        serializer = MenuSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response({'menu': serializer.data})
+    
+    def put(self, request, *args, **kwargs):
+        pk = kwargs.get('pk', None)
+        if pk is None:
+            return Response({"error":"Method PUT not allowed"})
+        try:
+            instance = Menu.objects.get(pk=pk)
+        except:
+            return Response({"error":"Object does not exists"})
+        
+        serializer = MenuSerializer(data=request.data, instance=instance)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response({'menu': serializer.data})
+
+    def delete(self, request, *args, **kwargs):
+        pk = kwargs.get('pk', None)
+        if pk is None:
+            return Response({"error":"Method DELETE not allowed"})
+        try:
+            instance = Menu.objects.get(pk=pk)
+        except:
+            return Response({"error":"Object does not exists"})
+
+        instance.delete()
+        return Response({"delete": "success"})
+
 
     

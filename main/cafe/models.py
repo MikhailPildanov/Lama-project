@@ -22,7 +22,7 @@ class Menu(models.Model):
     def imageURL(self):
         try:
             url = self.image.url
-        except AttributeError:
+        except:
             url = ''
         return url
 
@@ -42,7 +42,7 @@ class Food(models.Model):
     def imageURL(self):
         try:
             url = self.image.url
-        except AttributeError:
+        except:
             url = ''
         return url
 
