@@ -1,11 +1,15 @@
 from django.shortcuts import render, redirect
+
+from main.cafe.serializers import MenuSerializer
 from .models import *
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserUpdateForm
 from django.contrib.auth import login
 from django.http import JsonResponse
+from rest_framework import generics
 import json, datetime
+
 
 
 def home(request):
@@ -157,3 +161,11 @@ def profile_update(request):
     context = {'u_form': u_form}
 
     return render(request, 'user/profile_update.html', context)
+
+
+class menuAPIView(generics.ListAPIView):
+    queryset = Menu.objects.all()
+    serializer_class = MenuSerializer
+    
+
+    

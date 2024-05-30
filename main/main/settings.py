@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cafe.apps.CafeConfig',
     'bootstrap4',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

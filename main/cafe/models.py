@@ -12,17 +12,17 @@ class Customer(models.Model):
 class Menu(models.Model):
     name = models.CharField(max_length=200, null=True)
     description = models.TextField(null=True)
-    image = models.ImageField(null=True, blank=True)
+    image: models.ImageField = models.ImageField(null=True, blank=True)
     category = models.CharField(max_length=200, null=True)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.name)
         
     @property
     def imageURL(self):
         try:
             url = self.image.url
-        except:
+        except AttributeError:
             url = ''
         return url
 
@@ -36,13 +36,13 @@ class Food(models.Model):
     category = models.CharField(max_length=200, null=True)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
     
     @property
     def imageURL(self):
         try:
             url = self.image.url
-        except:
+        except AttributeError:
             url = ''
         return url
 
@@ -53,7 +53,7 @@ class Order(models.Model):
     transaction_id = models.CharField(max_length=200, null=True)
 
     def __str__(self):
-        return str(self.id)
+        return f'Order {str(self.transaction_id)}'
     
     @property
     def get_cart_total(self):
@@ -76,7 +76,7 @@ class ShippingAddress(models.Model):
     level = models.CharField(max_length=200, null=True)
 
     def __str__(self):
-        return self.street
+        return str(self.street)
 
 class OrderItem(models.Model):
     food = models.ForeignKey(Food, on_delete=models.SET_NULL, blank=True, null=True)
