@@ -139,6 +139,7 @@ def register(request):
             phone = form.cleaned_data.get('phone')
             user = form.save(commit=False)
             user.username = username
+            user.phone = phone
             user.save()
             Customer.objects.create(user=user, phone=phone) 
             login(request, user)
@@ -147,6 +148,7 @@ def register(request):
     return render(request, 'user/register.html', {
         'form':form
     })
+
 
 @login_required
 def profile(request):
